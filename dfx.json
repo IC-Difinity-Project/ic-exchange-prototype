@@ -1,0 +1,34 @@
+{
+  "canisters": {
+    "hello": {
+      "main": "backend/service/Hello.mo"
+    },
+    "image": {
+      "main": "backend/service/Image.mo"
+    },
+    "hello_assets": {
+      "dependencies": ["hello"],
+      "source": ["out"],
+      "type": "assets"
+    },
+    "dip721_nft_container": {
+      "main": "backend/service/dip-721-nft-container/Main.mo"
+    },
+    "dex": {
+      "main": "backend/service/dex/Main.mo"
+    }
+  },
+  "defaults": {
+    "build": {
+      "packtool": ""
+    }
+  },
+  "dfx": "0.10.0",
+  "networks": {
+    "local": {
+      "bind": "127.0.0.1:8000",
+      "type": "ephemeral"
+    }
+  },
+  "version": 1
+}

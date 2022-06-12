@@ -1,0 +1,30 @@
+type TxReceipt = 
+ variant {
+   Err: ApiError;
+   Ok: nat;
+ };
+type Principal = principal;
+type List = 
+ opt record {
+       nat64;
+       List;
+     };
+type Exchange = 
+ record {
+   tokenIds: List;
+   tokensOwner: Principal;
+ };
+type ApiError = 
+ variant {
+   InvalidTokenId;
+   Other;
+   Unauthorized;
+   ZeroAddress;
+ };
+service : {
+  addTokensToExchange: (Principal, List) -> () oneway;
+  executeChange: (Principal, Principal) -> (TxReceipt);
+  getAllExchanges: () -> (vec Exchange) query;
+  getOwnerExchanges: (Principal) -> (opt List) query;
+  whoami: () -> (principal) query;
+}
