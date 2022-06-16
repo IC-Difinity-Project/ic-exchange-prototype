@@ -8,7 +8,9 @@ body {
   font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
     Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
   line-height: 1.6;
-  font-size: 18px;
+  font-size: 16px;
+  background-color: #000;
+  color: #fff;
 }
 
 * {
@@ -37,6 +39,9 @@ button {
   margin-right: 6px;
   margin-top: 1rem;
   margin-bottom: 1rem;
+  border-color: #fff;
+  background-color: #000;
+  color: #fff;
 }
 
 section {
@@ -47,9 +52,11 @@ section {
 input {
   padding: 4px;
   margin: 0px 12px;
-  width: 600px;
+  width: 520px;
   height: 40px;
   font-size: 1rem;
+  background-color: #181818;
+  color: #fff !important;
 }
 
 label {

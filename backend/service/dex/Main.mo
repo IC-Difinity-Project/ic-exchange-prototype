@@ -63,7 +63,7 @@ type Exchange = {
 
     public shared func executeChange(tokenOwner1: Principal.Principal, tokenOwner2: Principal.Principal): async TxReceipt {
 
-      let dip721 = actor("s24we-diaaa-aaaaa-aaaka-cai"): actor { transferFromDip721: (from: Principal, to: Principal, token_id: Nat64) -> async TxReceipt  };         
+      let dip721 = actor("ewrph-5qaaa-aaaap-aagma-cai"): actor { transferFromDip721: (from: Principal, to: Principal, token_id: Nat64) -> async TxReceipt  };         
 
       switch (exchanges.get(tokenOwner1)) {
         case (?tokenIds1) {
