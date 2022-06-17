@@ -1,21 +1,15 @@
 {
   "canisters": {
-    "hello": {
-      "main": "backend/service/Hello.mo"
-    },
-    "image": {
-      "main": "backend/service/Image.mo"
-    },
-    "hello_assets": {
-      "dependencies": ["hello"],
-      "source": ["out"],
-      "type": "assets"
-    },
-    "dip721_nft_container": {
-      "main": "backend/service/dip-721-nft-container/Main.mo"
-    },
     "dex": {
-      "main": "backend/service/dex/Main.mo"
+      "main": "backend/service/dex/Main.mo",
+      "dex_assets": {
+        "dependencies": ["dex"],
+        "source": ["out"],
+        "type": "assets"
+      },
+      "dip721_nft_container": {
+        "main": "backend/service/dip-721-nft-container/Main.mo"
+      }
     }
   },
   "defaults": {

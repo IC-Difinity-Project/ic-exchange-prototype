@@ -87,6 +87,7 @@ export const NftSection = () => {
   }
   async function showMyNfts() {
     setMyNfts({ loading: "Loading...", nfts: [] })
+    console.log("!!!1111auth.principal", auth.principal)
 
     const nfts = await fetchUserNfts(auth.principal)
     setMyNfts({ loading: "", nfts })
@@ -111,6 +112,8 @@ export const NftSection = () => {
   }
 
   const fetchUserNfts = async userPrincipal => {
+    console.log("!!!22222 userPrincipal", userPrincipal)
+    console.log("!!!33333 auth.nftActor", auth.nftActor)
     const userTokenIds = await auth.nftActor.getTokenIdsForUserDip721(
       userPrincipal
     )
